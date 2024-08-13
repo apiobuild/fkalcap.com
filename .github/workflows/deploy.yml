@@ -5,9 +5,6 @@ on:
   push:
     branches:
       - main
-defaults:
-  run:
-    working-directory: page
 
 jobs:
   build:
@@ -19,14 +16,13 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-          cache-dependency-path: "./page/package-lock.json"
+          cache-dependency-path: "./package-lock.json"
       # Pick your own package manager and build script
       - run: npm install
       - run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./page/.output/public
+
   # Deployment job
   deploy:
     # Add a dependency to the build job
