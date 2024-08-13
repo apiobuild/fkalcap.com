@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .homepage {
-  background-image: url("images/homepage.png");
+  background-image: url("/images/homepage.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
