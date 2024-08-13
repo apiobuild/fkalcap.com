@@ -22,7 +22,8 @@ jobs:
       - run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
+        with:
+          path: .output/public
   # Deployment job
   deploy:
     # Add a dependency to the build job
