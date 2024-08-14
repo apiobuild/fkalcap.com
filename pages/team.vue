@@ -19,7 +19,7 @@
           </v-card-subtitle>
 
           <v-card-text>
-            {{ p.description }}
+            <span v-html="p.description"></span>
           </v-card-text>
           <div class="blue-line"></div>
         </v-card>
@@ -40,39 +40,33 @@ export default {
       team: [
         {
           img: Placeholder,
-          name: "FRANCIS LEUNG",
-          title: "CEO",
-          description:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam" +
-            "nonummy nibh euismod tincidunt ut laoreet dolore magna" +
-            "aliquam erat volutpat. Ut wisi enim ad minim veniam, quis" +
-            "nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip" +
-            "ex ea commodo consequat. Duis autem vel eum iriure dolor in" +
-            "hendrerit in vulputate velit esse molestie consequat.",
+          name: "Francis Leung",
+          title: "Managing Principal, CEO",
+          description: `
+            Francis Leung is Managing Principal, CEO, and co-founder of FKAL Capital. Founded in 2011, FKAL Capital is the family office of the Leung family that focuses on real estate investments across property types and throughout the capital stack. 
+            <br />
+            Prior to the formation of FKAL Capital, Francis oversaw the development of over 1 million square feet spread across four hotels including a Four Points by Sheraton (244 keys), a Sheraton Hotel (322 keys), a Fairfield Inn by Marriott (244 keys) and an Aloft (200 keys). 
+            <br />
+            In addition to managing FKAL Capital, Francis has executed over 30 leases totaling 75,000 square feet of space, primarily in the Midtown South submarket of Manhattan, as a Partner at Okada & Company. 
+            <br />
+            Francis departed this partnership in 2024 to focus on expanding the FKAL Capital platform as he views the real estate climate today as prime for investment for his family and third party investors. 
+            <br />
+            Francis is originally from New Jersey and received his Bachelor of Computer Science from the New Jersey Institute of Technology. He is the Foundation Chair and active member for Urban Land Institute’s Commercial and Retail Development Council National Product Council. 
+            `,
         },
         {
           img: Placeholder,
-          name: "KEVIN LEUNG",
-          title: "MANAGING DIRECTOR",
-          description:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam" +
-            "nonummy nibh euismod tincidunt ut laoreet dolore magna" +
-            "aliquam erat volutpat. Ut wisi enim ad minim veniam, quis" +
-            "nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip" +
-            "ex ea commodo consequat. Duis autem vel eum iriure dolor in" +
-            "hendrerit in vulputate velit esse molestie consequat.",
-        },
-        {
-          img: Placeholder,
-          name: "ALBERT LEUNG",
-          title: "TITLE",
-          description:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam" +
-            "nonummy nibh euismod tincidunt ut laoreet dolore magna" +
-            "aliquam erat volutpat. Ut wisi enim ad minim veniam, quis" +
-            "nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip" +
-            "ex ea commodo consequat. Duis autem vel eum iriure dolor in" +
-            "hendrerit in vulputate velit esse molestie consequat.",
+          name: "Kevin Leung",
+          title: "Managing Principal, CIO",
+          description: `
+            Kevin Leung Esq. is a Managing Principal, CIO, and co-founder of FKAL Capital.
+            <br />
+            In 2017, Kevin joined FKAL full time as CIO, overseeing the investment activity of FKAL. 
+            <br />
+            Prior to the formation of FKAL Capital, Kevin was a Partner at Dean Fong ESQ representing clients in real estate transactions. During his tenure, he focused on all facets of the real estate process including Purchase and Sale Agreements, Leasing, Contract Closings, Debt Refinancing, Partnership disputes, and Foreclosures. 
+            <br />
+            Kevin is originally from New Jersey and received his Bachelor of Arts, English Honors and Asian Studies degree from Seton Hall University and his Juris Doctorate from Brooklyn Law School. He passed the NY Bar Exam in 2012.
+            `,
         },
       ],
     };
