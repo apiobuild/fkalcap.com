@@ -104,7 +104,7 @@ export default {
   height: 150px;
 }
 .h-100 {
-  height: 100%;
+  height: 100vh !important;
 }
 .menu {
   font-size: 50px !important;

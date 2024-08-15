@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pt-extra px-extra full-screen">
+  <v-container class="pt-extra px-extra ">
     <v-row>
       <v-col cols="12">
         <p class="text-h3" style="color: rgb(var(--v-theme-primary))">

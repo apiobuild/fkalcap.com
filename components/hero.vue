@@ -1,5 +1,5 @@
 <template>
-  <v-container ref="hero" class="homepage full-screen">
+  <v-container ref="hero" class="homepage">
     <v-row class="pt-extra">
       <v-col class="text-center">
         <v-img height="70px" :src="Logo" />
@@ -16,7 +16,6 @@
   background-size: cover;
 
   max-width: 100vw;
-  height: 100%;
   width: 100%;
 }
 .pt-extra {
