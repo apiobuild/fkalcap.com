@@ -12,6 +12,7 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "nuxt": "^3.12.4",
+    "nuxt-gtag": "^2.1.0",
     "vue": "latest",
     "vue-photo-album": "^1.2.4"
   },

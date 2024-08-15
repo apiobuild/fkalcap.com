@@ -21,12 +21,12 @@
             class="text-h5 pt-10 no-active-background"
             v-for="item in items"
             :key="item.name"
-            :to="item.link.to"
+            :to="{ path: item.link.path, hash: item.link.hash }"
             :active="false"
           >
-            <span style="color: rgb(var(--v-theme-anchor))">{{
-              item.name
-            }}</span>
+            <span style="color: rgb(var(--v-theme-anchor))">
+              {{ item.name }}
+            </span>
           </v-list-item>
         </v-col>
       </v-container>
@@ -35,7 +35,7 @@
       <v-spacer />
       <v-container class="text-right">
         <v-icon
-          :color="isIndexPage ? 'white' : 'black'"
+          :color="iconColor"
           icon="mdi-menu"
           class="menu"
           @click.stop="drawer = !drawer"
@@ -52,43 +52,49 @@ export default {
   data() {
     return {
       drawer: false,
+      iconColor: "white", // Default to white since it's at the top initially
       items: [
         {
-          name: "Team",
-          link: { to: "/team" },
-        },
-        {
           name: "What We Do",
-          link: { to: "/what-we-do" },
+          link: { hash: "#what-we-do" },
         },
         {
           name: "About Us",
-          link: { to: "/about-us" },
+          link: { hash: "#about-us" },
         },
         {
-          name: "Investor Login",
-          link: { to: "/" },
+          name: "Team",
+          link: { hash: "#team" },
         },
         {
           name: "Contact",
-          link: { to: "/contact" },
-        },
-        {
-          name: "Back",
-          link: { to: "/" },
+          link: { hash: "#contact" },
         },
       ],
     };
   },
-  computed: {
-    isIndexPage() {
-      return this.$route.name === "index"; // Adjust based on your route naming
+  mounted() {
+    window.addEventListener("scroll", this.updateIconColor);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.updateIconColor);
+  },
+  methods: {
+    updateIconColor() {
+      const scrollPosition = window.scrollY;
+
+      // Change color based on scroll position relative to 100vh
+      if (scrollPosition > window.innerHeight) {
+        this.iconColor = "black";
+      } else {
+        this.iconColor = "white";
+      }
     },
   },
 };
 </script>
 
-<style scoped>
+<style>
 .close {
   font-size: 50px;
   padding-right: 50px;
@@ -101,10 +107,20 @@ export default {
   height: 100%;
 }
 .menu {
-  font-size: 50px;
+  font-size: 50px !important;
   padding-right: 50px;
 }
 .no-active-background {
   background-color: transparent !important;
+}
+
+.full-screen {
+  min-height: 100vh;
+}
+@media (min-width: 1280px) {
+  .px-extra {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 }
 </style>

@@ -5,10 +5,10 @@
         <p class="text-h3" style="color: rgb(var(--v-theme-primary))">Team</p>
       </v-col>
     </v-row>
-    <v-row v-for="p in team" :key="p.name" class="pt-15">
-      <v-col cols="12" md="2">
+    <v-row v-for="p in team" :key="p.name" class="pt-15 px-0">
+      <!-- <v-col cols="12" md="2">
         <v-img width="150" :src="p.img" />
-      </v-col>
+      </v-col> -->
       <v-col cols="12" md="10">
         <v-card variant="flat" color="transparent">
           <v-card-title>
@@ -73,17 +73,7 @@ export default {
   },
 };
 </script>
-<style scoped>
-.pt-extra {
-  padding-top: 200px;
-}
-@media (min-width: 1280px) {
-  .px-extra {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-}
-
+<style>
 .blue-line {
   height: 2px;
   background-color: rgb(var(--v-theme-primary));

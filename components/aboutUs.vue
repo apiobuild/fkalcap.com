@@ -30,14 +30,3 @@ export default {
   name: "About Us",
 };
 </script>
-<style scoped>
-.pt-extra {
-  padding-top: 200px;
-}
-@media (min-width: 1280px) {
-  .px-extra {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-}
-</style>

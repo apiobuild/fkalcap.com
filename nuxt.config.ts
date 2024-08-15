@@ -15,9 +15,13 @@ export default defineNuxtConfig({
       config.plugins.push(vuetify({ autoImport: true }));
     },
   },
+  gtag: {
+    id: "G-KKHMPNN6GN",
+  },
   components: [
     {
       path: "~/components",
     },
   ],
+  modules: ["nuxt-gtag"],
 });

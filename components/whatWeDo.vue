@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pt-extra px-extra">
+  <v-container class="pt-extra px-extra full-screen">
     <v-row>
       <v-col cols="12">
         <p class="text-h3" style="color: rgb(var(--v-theme-primary))">
@@ -68,14 +68,3 @@ export default {
   name: "what-we-do",
 };
 </script>
-<style scoped>
-.pt-extra {
-  padding-top: 200px;
-}
-@media (min-width: 1280px) {
-  .px-extra {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-}
-</style>
